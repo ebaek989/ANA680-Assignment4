@@ -1,5 +1,9 @@
 name: Train/Build & Deploy to Heroku
 
+name: Install Heroku CLI
+  run: |
+    curl https://cli-assets.heroku.com/install.sh | sh
+
 on:
   push:
     branches: [ "main" ]
