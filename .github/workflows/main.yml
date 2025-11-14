@@ -1,9 +1,5 @@
 name: Train/Build & Deploy to Heroku
 
-name: Install Heroku CLI
-  run: |
-    curl https://cli-assets.heroku.com/install.sh | sh
-
 on:
   push:
     branches: [ "main" ]
@@ -31,6 +27,10 @@ jobs:
           import app
           print("app imported OK")
           PY
+          
+      - name: Install Heroku CLI
+        run: |
+        curl https://cli-assets.heroku.com/install.sh | sh
 
       - name: Setup Heroku
         uses: heroku/actions/setup@v2
