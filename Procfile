@@ -1,1 +1,1 @@
-web: gunicorn app:ana680-assignment4
+web: gunicorn app:app
