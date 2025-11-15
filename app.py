@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-MODEL_PATH = os.getenv("MODEL_PATH", "breast_lr.pkl")
+MODEL_PATH = os.getenv("MODEL_PATH", "model.pkl")
 
 try:
     with open(MODEL_PATH, "rb") as f:
