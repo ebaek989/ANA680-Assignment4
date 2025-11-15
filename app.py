@@ -25,7 +25,7 @@ DEFAULT_FEATURES = [
 ]
 
 def get_feature_order():
-    names = getattr(model, "feature_names_in_", None) if model else None
+    names = getattr(model, "feature_names_in_", None) if model is not None else None
     if names is not None:
         return list(names)
     names = getattr(model, "feature_names_", None) if model else None
